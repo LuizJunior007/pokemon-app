@@ -1,9 +1,17 @@
+:root{
+    --textColor: #f9f9f9;
+    --bgColor: #202020;
+    --cardBgColor: #282828;
+    --borderColor: #303030;
+}
+
 html, body{
     min-height: 100%;
 }
 
 body{
-    background-color: #f9f9f9;
+    background-color: var(--bgColor);
+    color: var(--textColor);
 }
 
 .card img{
@@ -14,10 +22,28 @@ body{
 .card{
     display: flex;
     align-items: center;
+    background-color: var(--cardBgColor);
+    color: var(--textColor);
+    border-color: var(--borderColor);
 }
 
 .card:hover{
     cursor: pointer;
+}
+
+.form-control{
+    background-color: var(--cardBgColor);
+    color: var(--textColor);
+    border-color: var(--borderColor);
+}
+
+.form-control::placeholder{
+    color: var(--textColor);
+}
+
+.form-control:focus{
+    background-color: var(--cardBgColor);
+    color: var(--textColor);
 }
 
 a{

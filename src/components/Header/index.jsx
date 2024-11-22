@@ -9,7 +9,15 @@ const Header = () => {
         <header>
             <Navbar collapseOnSelect expand="lg" className="bg-primary navbar-dark">
                 <Container fluid="xxl">
-                    <Link to="/" className='navbar-brand'>Pokemon-app</Link>
+                    <Link to="/" className='navbar-brand d-flex align-items-center'>
+                        <div>
+                            <img src="/pikachu.png" alt="logo" />
+                        </div>
+
+                        <div className='ms-2'>
+                            Pokemon-app
+                        </div>
+                    </Link>
 
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 

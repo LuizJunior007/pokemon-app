@@ -23,14 +23,14 @@ const Pokemons = ({ pokemons, loading, loadMorePokemons }) => {
             {loading 
                 ? 
                     <div className='text-center'>
-                        <Spinner animation="border" variant="dark">
+                        <Spinner animation="border" variant="primary">
                             <span className="visually-hidden">Loading...</span>
                         </Spinner>
                     </div>
                 :
                     <div>
                         <Row className='g-2'>
-                            {pokemons.map((p, i) => 
+                            {pokemons.length > 0 ? pokemons.map((p, i) => 
                                 <Col xxs="12" xs="6" sm="4" md="3" lg="2" key={i}>
                                     <Link to={`/pokemon/${handleGetPokId(p.url)}`}>
                                         <Card>
@@ -39,7 +39,9 @@ const Pokemons = ({ pokemons, loading, loadMorePokemons }) => {
                                         </Card>
                                     </Link>
                                 </Col>
-                            )}
+                            ) : <Col>
+                                    <p className='fw-medium text-secondary'>Nenhum pokemon foi encontrado</p>
+                                </Col>}
                         </Row>
 
                         <div className='text-center mt-3 mb-3'>

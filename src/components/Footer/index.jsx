@@ -3,9 +3,9 @@ const Footer = () => {
     const date = new Date();
 
     return(
-        <footer className="bg-white p-3 mt-5 text-center">
+        <footer className="p-3 mt-5 text-center">
             <small className="fw-medium">
-                {date.getFullYear()} &copy; Todos os direitos reservados
+                {date.getFullYear()} &copy; Feito por L. jr
             </small>
         </footer>
     );
