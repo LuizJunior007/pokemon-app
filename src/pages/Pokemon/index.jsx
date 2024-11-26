@@ -46,6 +46,18 @@ const Pokemon = () => {
 
     }, []);
 
+    useEffect(() => {
+
+        document.title = 'Carregando... - Pokemon-app';
+
+        if(pokemon){
+
+            document.title = `${handleFirstLetterUpper(pokemon.name)} - Pokemon-app`;
+
+        }
+
+    }, [pokemon]);
+
     if(!pokemon){
 
         return(
