@@ -1,4 +1,4 @@
-import Container from "react-bootstrap/esm/Container";
+import Container from "react-bootstrap/Container";
 import Header from "../Header";
 import Footer from "../Footer";
 import { useLocation } from "react-router-dom";

@@ -5,18 +5,18 @@ import Spinner from 'react-bootstrap/Spinner';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
+export const handleGetPokId = (url) => {
+
+    return url.split('/')[6];
+
+}
+
+export const handleFirstLetterUpper = (string) => {
+
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 const Pokemons = ({ pokemons, loading, loadMorePokemons }) => {
-
-    const handleGetPokId = (url) => {
-
-        return url.split('/')[6];
-
-    }
-
-    const handleFirstLetterUpper = (string) => {
-
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
 
     return(
         <>
